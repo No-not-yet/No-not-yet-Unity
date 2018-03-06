@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start(){
-		Debug.Log (this.level + " is the default lvl");
+		// Debug Logs
+		//Debug.Log (this.level + " is the default lvl");
 	}
 
 	public int getLevel(){

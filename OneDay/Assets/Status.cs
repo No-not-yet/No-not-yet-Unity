@@ -29,8 +29,11 @@ public class Status : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// Debug Logs
+		/*
 		Debug.Log (this.isWalking + " is the default isWalking");
 		Debug.Log (this.isBusy + " is the default isBusy");
+		*/
 	}
 	
 	// Update is called once per frame
