@@ -28,21 +28,7 @@ public class GameManager : MonoBehaviour {
 	void Start(){
 		// Debug Logs
 		//Debug.Log (this.level + " is the default lvl");
-
-		// 2nd way Test 1.0
-		/*Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
-		toDos.Add (new ToDo("cocking", false));
-		toDos.Add (new ToDo("bath", false));
-		toDos.Add (new ToDo("tv", false));*/
-
-		//setToDos (1, true);
-		//setToDos (3, true);
-
-		// Debug Prints
-		/*printListToDo();
-		Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
-
-		toDos.Clear ();*/
+		//toDos.Clear ();
 
 	}
 
@@ -58,8 +44,10 @@ public class GameManager : MonoBehaviour {
 	public void printListToDo(){
 		// Print List
 		Debug.Log("I am Printing the boolean list!");
+		int count = 0;
 		foreach (ToDo aDo in toDos) {
-			print (aDo.todo + " value: " + aDo.done);
+			print (count + " " + aDo.todo + " value: " + aDo.done);
+			count++;
 		}
 	}
 

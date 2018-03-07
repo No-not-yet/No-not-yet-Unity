@@ -71,6 +71,10 @@ public class PointerInteraction : MonoBehaviour
 		// Not walking to interact
 		if (playerStatus.getBusy()) {
 			Debug.Log ("Interacting");
+
+			// Debug List interactives
+			//GameManager.instance.toDos[6].done = true;
+			//GameManager.instance.printListToDo ();
 		}
 
 		// playerStatus.setBusy (false);
