@@ -33,7 +33,7 @@ public class Status : MonoBehaviour {
 		/*
 		Debug.Log (this.isWalking + " is the default isWalking");
 		Debug.Log (this.isBusy + " is the default isBusy");
-		*/
+		*/	
 	}
 	
 	// Update is called once per frame
