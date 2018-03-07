@@ -10,13 +10,8 @@ public class GameManager : MonoBehaviour {
 	// Value that change the room
 	private int level = 2;
 
-	// Length lists
-	public int lvlList1 = 5;
-	public int lvlList2 = 7;
-	private int ListSize = 0;
-
-	// List booleans
-	private List<bool> toDosB = new List<bool>();
+	// 2nd way
+	public List<ToDo> toDos;
 
 	// Make sure it is a singleton 
 	void Awake(){
@@ -25,13 +20,31 @@ public class GameManager : MonoBehaviour {
 		else if (instance != null)
 			Destroy (gameObject);
 		DontDestroyOnLoad (gameObject);
+
+		toDos = new List<ToDo>();
 	}
 
 	// Use this for initialization
 	void Start(){
 		// Debug Logs
 		Debug.Log (this.level + " is the default lvl");
-		generateList();
+
+		// 2nd way
+
+		Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
+		toDos.Add (new ToDo("cocking", false));
+		toDos.Add (new ToDo("bath", false));
+		toDos.Add (new ToDo("tv", false));
+
+		//setToDos (1, true);
+		//setToDos (3, true);
+
+		// Debug Prints
+		printListToDo();
+		Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
+
+		toDos.Clear ();
+
 	}
 
 	public int getLevel(){
@@ -42,47 +55,18 @@ public class GameManager : MonoBehaviour {
 		this.level = value;
 	}
 
-	public void generateList(){
 
-		switch (level) {
-		case 1:
-			ListSize = lvlList1;
-			break;
-		case 2:
-			ListSize = lvlList2;
-			break;
-		default:
-			print ("Level must be 1 or 2 in order to generate List");
-			break;
-		}
-
-		for (int i = 0; i < ListSize; i++) {
-			toDosB.Add (true);
-		}
-
-
-		// printListB ();
-
-
-	}
-
-	public List<bool> getToDosB(){
-		return this.toDosB;
-	}
-
-	public void printListB(){
+	public void printListToDo(){
 		// Print List
 		Debug.Log("I am Printing the boolean list!");
-		int count = 0;
-		foreach(bool b in toDosB){
-			count += 1;
-			Debug.Log ("Element #" + count + " : "  + b);
+		foreach (ToDo aDo in toDos) {
+			print (aDo.todo + " value: " + aDo.done);
 		}
 	}
 
-	public void setToDosB(int index, bool value){
-		if (index >= 0 && index < ListSize)
-			toDosB [index] = value;
+	public void setToDos(int index, bool value){
+		if (index >= 0 && index < toDos.Count)
+			toDos [index].done = value;
 		else
 			Debug.Log ("The index to change is out of range");
 	}
