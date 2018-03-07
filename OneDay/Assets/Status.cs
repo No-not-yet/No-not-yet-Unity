@@ -7,6 +7,7 @@ public class Status : MonoBehaviour {
 	// Values that will lock the button
 	private bool isWalking = false;
 	private bool isBusy = false;
+	private float timer;
 
 
 	// Setters and Getters
@@ -26,6 +27,9 @@ public class Status : MonoBehaviour {
 		this.isBusy = value;
 	}
 
+	public float getTimer(){
+		return this.timer;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +42,6 @@ public class Status : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		timer += Time.deltaTime;
 	}
 }

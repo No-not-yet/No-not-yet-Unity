@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start(){
 		// Debug Logs
-		Debug.Log (this.level + " is the default lvl");
+		//Debug.Log (this.level + " is the default lvl");
 
 		// 2nd way Test 1.0
 		/*Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
