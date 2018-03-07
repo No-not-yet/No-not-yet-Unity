@@ -29,21 +29,20 @@ public class GameManager : MonoBehaviour {
 		// Debug Logs
 		Debug.Log (this.level + " is the default lvl");
 
-		// 2nd way
-
-		Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
+		// 2nd way Test 1.0
+		/*Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
 		toDos.Add (new ToDo("cocking", false));
 		toDos.Add (new ToDo("bath", false));
-		toDos.Add (new ToDo("tv", false));
+		toDos.Add (new ToDo("tv", false));*/
 
 		//setToDos (1, true);
 		//setToDos (3, true);
 
 		// Debug Prints
-		printListToDo();
+		/*printListToDo();
 		Debug.Log ("Tu ToDo Tiene " + toDos.Count + " elementos");
 
-		toDos.Clear ();
+		toDos.Clear ();*/
 
 	}
 
