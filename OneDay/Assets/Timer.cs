@@ -6,26 +6,39 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
 
+	// x / 60 = time in hours.
+	// Init at 8:00 finish at 20:00.
     private int sTimeInt = 480;
+	private int sTimeLimit = 1200;
+	private float cTime;
 
     // Use this for initialization
     void Start()
     {
-
-
+		// this.enabled = false;
+		this.cTime = this.sTimeInt;
     }
 
     // Update is called once per frame
     void Update()
     {   //Test currentTime() must give format 00:00
-        //Debug.Log(currentTime());
-
+        Debug.Log(currentTime());
     }
+
+	public void toogleTime(){
+		this.enabled = !this.enabled;
+	}
 
     public string currentTime()
     {   
+		if (cTime >= sTimeLimit)
+		{
+			return "El día ha terminado.";
+		}
+
         float elapsed = Time.realtimeSinceStartup;
-        float cTime = sTimeInt + elapsed;
+        cTime = sTimeInt + elapsed;
+
         string hrs = ((int)cTime / 60).ToString();
         string min;
         int auxMin = ((int)cTime % 60);
@@ -41,15 +54,9 @@ public class Timer : MonoBehaviour
         }
 
         string currentTime = "" + hrs + ":" + min;
-        if (cTime >= 1200)
-        {
-            return "El día ha terminado.";
 
-        }
-        else
-        {
-            return currentTime;
-        }
 
+		return currentTime;
+        
     }
 }
