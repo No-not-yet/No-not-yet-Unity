@@ -10,10 +10,8 @@ public class ForwardMovement : MonoBehaviour {
 
 	void Start(){
 		playerStatus = this.GetComponent<Status> ();
-		Debug.Log ("Walking esta en: " + playerStatus.getWalking ());
+		// Debug.Log ("Walking esta en: " + playerStatus.getWalking ());
 
-		// Test if busy is true
-		//playerStatus.setBusy (true);
 	}
 
 	// Update is called once per frame
@@ -28,4 +26,5 @@ public class ForwardMovement : MonoBehaviour {
 		if( !(Input.touchCount > 0) && playerStatus.getWalking())
 			playerStatus.setWalking (false);
 	}
+		
 }
