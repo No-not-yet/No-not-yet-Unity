@@ -71,7 +71,7 @@ public class Picker : MonoBehaviour {
 		// Send show info
 		this.gameObject.GetComponent<WelcomeMsg> ().showInfo(this.pickedObject.GetComponent<ListInteraction>().getInfo());
 
-		Debug.Log ("Picked " + this.pickedObject.name);
+		//Debug.Log ("Picked " + this.pickedObject.name);
 	}
 
 	public void Drop(){
@@ -96,8 +96,8 @@ public class Picker : MonoBehaviour {
 		timer = 0f;
 
 		// Debug List Interaction
-		Debug.Log("In the list interaction you have been used? ");
-		GameManager.instance.printListToDo ();
+		//Debug.Log("In the list interaction you have been used? ");
+		//GameManager.instance.printListToDo ();
 
 	}
 
