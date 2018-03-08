@@ -20,12 +20,12 @@ public class Money : MonoBehaviour {
 
     public void pay(int cost)
     {
-        Debug.Log("Purchase: $" + cost);
+        //Debug.Log("Purchase: $" + cost);
         if (this.currentValue >= cost)
         {
             this.currentValue -= cost;
             this.getMoney();
-            Debug.Log("Purchase done!");
+            //Debug.Log("Purchase done!");
         }
         else
         {
@@ -37,9 +37,9 @@ public class Money : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Current Money: $" + getMoney());
-        pay(10000);
-        Debug.Log("Current Money: $" + getMoney());
+        //Debug.Log("Current Money: $" + getMoney());
+        //pay(10000);
+        //Debug.Log("Current Money: $" + getMoney());
     }
 	
 	// Update is called once per frame

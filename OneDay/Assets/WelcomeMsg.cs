@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class WelcomeMsg : MonoBehaviour
 {
-    public GameObject Inst, welcome;
+    public GameObject Inst, welcome, tagObjts;
     
     float time = 5f;
 
     void Start()
     {        
-        Invoke("Hide", time);
+		//Disable welcome mssg for dev purposes also inst not invoking
+		//welcome.SetActive(false);
+		Invoke("Hide", time);
     }
     void Hide()
     {

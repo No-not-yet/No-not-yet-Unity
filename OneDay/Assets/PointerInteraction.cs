@@ -2,29 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PointerInteraction : MonoBehaviour
 {
-
     private float timer;
     public float gazeTimer = 2f;
     private bool gazeAt;
 	private Status playerStatus;
 
+	// Tooltip variables
+	public float tooltipDelay = 0.3f;
+	public string toolTipInfo = "";
+	Coroutine mouseOver;
+	private Text toolTiptext;
+	public GameObject toolTipObj;
+
     // Use this for initialization
     void Start()
     {
-
+		// if still null, change it to name object or specify on editor.
+		if (this.toolTipInfo == "") {
+			this.toolTipInfo = this.name;
+		}
+			
 		GameObject player = GameObject.Find ("Player");
 
 		// Check exists
-		if (player == null) {
-			Debug.Log ("Pointer couldn t find a player");
+		if (player == null || toolTipObj == null) {
+			Debug.Log ("Pointer couldn t find a player or his tooltip is not asigned");
 			this.enabled = false;
-
 		} 
 
 		playerStatus = player.GetComponent<Status> ();
+		toolTiptext = toolTipObj.GetComponent<Text> ();
+
 		//Debug.Log ("Walking is in (checked by Pointer): " + playerStatus.getWalking ());
     }
 
@@ -58,12 +70,18 @@ public class PointerInteraction : MonoBehaviour
     {
 		// Used for sendAfterSeconds and ChangeTo Busy
 		gazeAt = true;
+		if (mouseOver == null) {
+			mouseOver = StartCoroutine (showTooltip());
+		}
     }
 
     public void PointerExit()
     {
         gazeAt = false;
 		playerStatus.setBusy (false);
+		timer = 0f;
+		mouseOver = null;
+		toolTipObj.SetActive (false);
     }
 
     public void PointerDown()
@@ -79,5 +97,27 @@ public class PointerInteraction : MonoBehaviour
 
 		// playerStatus.setBusy (false);
     }
+
+	IEnumerator showTooltip(){
+		while (gazeAt) {
+
+			timer += Time.deltaTime;
+
+			if (timer > tooltipDelay) {
+				toolTipObj.SetActive (true);
+
+				toolTiptext.text = "";
+				foreach (char letter in this.toolTipInfo.ToCharArray()) {
+					toolTiptext.text += letter;
+					yield return new WaitForSeconds (0.2f);
+				}
+					
+				yield break;
+			} else {
+				yield return null;
+			}
+		}
+	}
+
 		
 }
