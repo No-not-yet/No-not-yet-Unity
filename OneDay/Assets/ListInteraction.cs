@@ -29,4 +29,8 @@ public class ListInteraction : MonoBehaviour {
 	public void setToUsed(){
 		GameManager.instance.setToDos (this.indexToDo, true);
 	}
+
+	public int getCost(){
+		return this.costToDo;
+	}
 }

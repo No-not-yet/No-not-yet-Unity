@@ -17,6 +17,9 @@ public class Picker : MonoBehaviour {
 	private float timer = 0f;
 	Coroutine willDrop;
 
+	// Cost variable
+	private int cost;
+
 	// Use this for initialization
 	void Start () {
 		cameraChild = this.gameObject.transform.GetChild (0);
@@ -64,6 +67,12 @@ public class Picker : MonoBehaviour {
 
 		// Before droping, send signal to interact with list
 		this.pickedObject.GetComponent<ListInteraction>().setToUsed();
+
+		// Rest money to yourself
+		this.cost = this.pickedObject.GetComponent<ListInteraction>().getCost();
+		this.gameObject.GetComponent<Money> ().pay (this.cost);
+		Debug.Log ("Got : " + this.gameObject.GetComponent<Money> ().getMoney() + " dlls");
+
 
 		this.pickedObject = null;
 		this.willDrop = null;
