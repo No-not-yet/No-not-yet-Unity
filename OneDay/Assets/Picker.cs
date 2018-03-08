@@ -42,6 +42,11 @@ public class Picker : MonoBehaviour {
 	}
 
 	public void setPickedObject(GameObject go){
+
+		// Check if there is not a picked object still;
+		if (pickedObject)
+			return;
+
 		this.pickedObject = go;
 		this.initialPos = go.transform.position;
 
@@ -59,6 +64,7 @@ public class Picker : MonoBehaviour {
 		this.pickedObject = null;
 		this.willDrop = null;
 		timer = 0f;
+
 	}
 
 	IEnumerator willDropF(){
