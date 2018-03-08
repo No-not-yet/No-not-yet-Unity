@@ -50,6 +50,15 @@ public class Picker : MonoBehaviour {
 		if (pickedObject)
 			return;
 
+		// Check if you pay, otherwise not do anything
+		this.cost = go.GetComponent<ListInteraction>().getCost();
+		if (!(this.gameObject.GetComponent<Money> ().pay (this.cost))) {
+			Debug.Log ("Couldn t pay");
+			return;
+		}
+
+		Debug.Log ("Got : " + this.gameObject.GetComponent<Money> ().getMoney() + " dlls");
+
 		this.pickedObject = go;
 		this.initialPos = go.transform.position;
 
@@ -68,10 +77,8 @@ public class Picker : MonoBehaviour {
 		// Before droping, send signal to interact with list
 		this.pickedObject.GetComponent<ListInteraction>().setToUsed();
 
-		// Rest money to yourself
-		this.cost = this.pickedObject.GetComponent<ListInteraction>().getCost();
-		this.gameObject.GetComponent<Money> ().pay (this.cost);
-		Debug.Log ("Got : " + this.gameObject.GetComponent<Money> ().getMoney() + " dlls");
+
+
 
 
 		this.pickedObject = null;
