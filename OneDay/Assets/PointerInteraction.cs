@@ -18,6 +18,9 @@ public class PointerInteraction : MonoBehaviour
 	private Text toolTiptext;
 	public GameObject toolTipObj;
 
+	// Picker variables
+	private Picker playerPicker;
+
     // Use this for initialization
     void Start()
     {
@@ -36,6 +39,7 @@ public class PointerInteraction : MonoBehaviour
 
 		playerStatus = player.GetComponent<Status> ();
 		toolTiptext = toolTipObj.GetComponent<Text> ();
+		playerPicker = player.GetComponent<Picker> ();
 
 		//Debug.Log ("Walking is in (checked by Pointer): " + playerStatus.getWalking ());
     }
@@ -90,6 +94,7 @@ public class PointerInteraction : MonoBehaviour
 		if (playerStatus.getBusy()) {
 			Debug.Log ("Interacting");
 
+			playerPicker.setPickedObject (this.gameObject);
 			// Debug List interactives
 			//GameManager.instance.toDos[6].done = true;
 			//GameManager.instance.printListToDo ();
@@ -108,7 +113,8 @@ public class PointerInteraction : MonoBehaviour
 
 				toolTiptext.text = "";
 				foreach (char letter in this.toolTipInfo.ToCharArray()) {
-					toolTiptext.text += letter;
+					if(gazeAt)
+						toolTiptext.text += letter;
 					yield return new WaitForSeconds (0.2f);
 				}
 					
