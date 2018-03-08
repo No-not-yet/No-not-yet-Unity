@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -469,7 +469,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4189723887881138, guid: 939669b553beb8445b2a7e10401c2f24, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23326820461136506, guid: 939669b553beb8445b2a7e10401c2f24,
         type: 2}
@@ -636,7 +636,6 @@ GameObject:
   - component: {fileID: 1839795006}
   - component: {fileID: 1839795007}
   - component: {fileID: 1839795008}
-  - component: {fileID: 1839795009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
