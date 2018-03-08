@@ -740,6 +740,11 @@ Prefab:
       propertyPath: toolTipObj
       value: 
       objectReference: {fileID: 881015172}
+    - target: {fileID: 114739153250699354, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
   m_IsPrefabParent: 0
@@ -1106,6 +1111,7 @@ GameObject:
   - component: {fileID: 1839795007}
   - component: {fileID: 1839795008}
   - component: {fileID: 1839795009}
+  - component: {fileID: 1839795010}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1225,6 +1231,17 @@ MonoBehaviour:
   Inst: {fileID: 1112542679}
   welcome: {fileID: 926460684}
   tagObjts: {fileID: 881015172}
+--- !u!114 &1839795010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839795000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3907a45ce45d45f4fa69fd5cf7ae6064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1977918590
 GameObject:
   m_ObjectHideFlags: 0
