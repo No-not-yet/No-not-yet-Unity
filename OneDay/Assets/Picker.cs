@@ -17,6 +17,9 @@ public class Picker : MonoBehaviour {
 	private float timer = 0f;
 	Coroutine willDrop;
 
+	// Cost variable
+	private int cost;
+
 	// Use this for initialization
 	void Start () {
 		cameraChild = this.gameObject.transform.GetChild (0);
@@ -47,6 +50,15 @@ public class Picker : MonoBehaviour {
 		if (pickedObject)
 			return;
 
+		// Check if you pay, otherwise not do anything
+		this.cost = go.GetComponent<ListInteraction>().getCost();
+		if (!(this.gameObject.GetComponent<Money> ().pay (this.cost))) {
+			Debug.Log ("Couldn t pay");
+			return;
+		}
+
+		Debug.Log ("Got : " + this.gameObject.GetComponent<Money> ().getMoney() + " dlls");
+
 		this.pickedObject = go;
 		this.initialPos = go.transform.position;
 
@@ -61,9 +73,21 @@ public class Picker : MonoBehaviour {
 
 		this.pickedObject.transform.position = initialPos;
 		this.pickedObject.GetComponent<PointerInteraction> ().enabled = false;
+
+		// Before droping, send signal to interact with list
+		this.pickedObject.GetComponent<ListInteraction>().setToUsed();
+
+
+
+
+
 		this.pickedObject = null;
 		this.willDrop = null;
 		timer = 0f;
+
+		// Debug List Interaction
+		Debug.Log("In the list interaction you have been used? ");
+		GameManager.instance.printListToDo ();
 
 	}
 

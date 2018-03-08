@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
 		Debug.Log("I am Printing the boolean list!");
 		int count = 0;
 		foreach (ToDo aDo in toDos) {
-			print (count + " " + aDo.todo + " value: " + aDo.done);
+			print (count + " " + aDo.todo + " used: " + aDo.done + " cost: " + aDo.cost + " info: " + aDo.info);
 			count++;
 		}
 	}

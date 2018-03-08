@@ -18,19 +18,14 @@ public class Money : MonoBehaviour {
 
 
 
-    public void pay(int cost)
+    public bool pay(int cost)
     {
-        //Debug.Log("Purchase: $" + cost);
-        if (this.currentValue >= cost)
-        {
-            this.currentValue -= cost;
-            this.getMoney();
-            //Debug.Log("Purchase done!");
-        }
-        else
-        {
-            Debug.Log("Not enough money!");
-        }
+		if (this.currentValue < cost) {
+			Debug.Log ("Not enough money!");
+			return false;
+		}
+		this.currentValue -= cost;
+		return true;
     }
 
 
