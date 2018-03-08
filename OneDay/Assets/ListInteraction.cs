@@ -30,6 +30,10 @@ public class ListInteraction : MonoBehaviour {
 		GameManager.instance.setToDos (this.indexToDo, true);
 	}
 
+	public bool alreadyUsed(){
+		return GameManager.instance.getIfUsed (this.indexToDo);
+	}
+
 	public int getCost(){
 		return this.costToDo;
 	}

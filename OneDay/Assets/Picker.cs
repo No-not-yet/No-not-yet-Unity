@@ -50,6 +50,12 @@ public class Picker : MonoBehaviour {
 		if (pickedObject)
 			return;
 
+		// Check if you already used the object
+		if( go.GetComponent<ListInteraction>().alreadyUsed() ){
+			Debug.Log ("Already used!");
+			return;
+		}
+
 		// Check if you pay, otherwise not do anything
 		this.cost = go.GetComponent<ListInteraction>().getCost();
 		if (!(this.gameObject.GetComponent<Money> ().pay (this.cost))) {
