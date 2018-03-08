@@ -58,4 +58,8 @@ public class GameManager : MonoBehaviour {
 			Debug.Log ("The index to change is out of range");
 	}
 
+	public bool getIfUsed(int index){
+		return toDos [index].done;
+	}
+
 }
