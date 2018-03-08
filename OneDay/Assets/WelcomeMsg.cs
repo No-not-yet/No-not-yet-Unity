@@ -12,8 +12,8 @@ public class WelcomeMsg : MonoBehaviour
     void Start()
     {        
 		//Disable welcome mssg for dev purposes also inst not invoking
-		//welcome.SetActive(false);
-		Invoke("Hide", time);
+		welcome.SetActive(false);
+		//Invoke("Hide", time);
     }
     void Hide()
     {
