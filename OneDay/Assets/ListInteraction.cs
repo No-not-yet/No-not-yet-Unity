@@ -37,4 +37,8 @@ public class ListInteraction : MonoBehaviour {
 	public int getCost(){
 		return this.costToDo;
 	}
+
+	public string getInfo(){
+		return this.infoToDo;
+	}
 }
