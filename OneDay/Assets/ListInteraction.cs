@@ -5,13 +5,16 @@ using UnityEngine;
 public class ListInteraction : MonoBehaviour {
 
 	public string nameToDo;
+	public int costToDo = 100;
+	public string infoToDo = "leurem ipsum";
+
 	public int indexToDo;
 	private ToDo myself;
 
 	// Use this for initialization
 	void Start () {
 		nameToDo = this.name;
-		myself = new ToDo (nameToDo, false);
+		myself = new ToDo (nameToDo, false, costToDo, infoToDo);
 		GameManager.instance.toDos.Add(this.myself);
 
 		indexToDo = GameManager.instance.toDos.Count - 1;

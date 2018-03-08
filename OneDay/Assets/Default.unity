@@ -581,6 +581,16 @@ Prefab:
       propertyPath: toolTipObj
       value: 
       objectReference: {fileID: 881015172}
+    - target: {fileID: 114944458904612804, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: costToDo
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114944458904612804, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: infoToDo
+      value: cocinar es bueno
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
   m_IsPrefabParent: 0
@@ -857,6 +867,16 @@ Prefab:
       propertyPath: toolTipObj
       value: 
       objectReference: {fileID: 881015172}
+    - target: {fileID: 114944458904612804, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: costToDo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114944458904612804, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: infoToDo
+      value: no te bagnes
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
   m_IsPrefabParent: 0
