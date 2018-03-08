@@ -22,4 +22,8 @@ public class ListInteraction : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public void setToUsed(){
+		GameManager.instance.setToDos (this.indexToDo, true);
+	}
 }

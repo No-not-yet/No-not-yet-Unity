@@ -61,9 +61,17 @@ public class Picker : MonoBehaviour {
 
 		this.pickedObject.transform.position = initialPos;
 		this.pickedObject.GetComponent<PointerInteraction> ().enabled = false;
+
+		// Before droping, send signal to interact with list
+		this.pickedObject.GetComponent<ListInteraction>().setToUsed();
+
 		this.pickedObject = null;
 		this.willDrop = null;
 		timer = 0f;
+
+		// Debug List Interaction
+		Debug.Log("In the list interaction you have been used? ");
+		GameManager.instance.printListToDo ();
 
 	}
 
