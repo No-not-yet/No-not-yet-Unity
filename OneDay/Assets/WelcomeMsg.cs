@@ -44,6 +44,12 @@ public class WelcomeMsg : MonoBehaviour
 			welcome.SetActive(false);
 			time = 0.1f;
 			Inst.GetComponentInChildren<Text> ().text = "The real danger in poverty is the lack of options, hope you could understand it after this game. \n Make a donation to help, make a difference ";
+			Inst.GetComponentsInChildren<Text> () [1].text = "";
+		}else if(GameManager.instance.getLevel() == 4){
+			welcome.SetActive(false);
+			time = 0.1f;
+			Inst.GetComponentInChildren<Text> ().text = "";
+			Inst.GetComponentsInChildren<Text> () [1].text = "Have a nice day";
 		}
 
 		Invoke("Hide", time);
@@ -60,6 +66,8 @@ public class WelcomeMsg : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Inst.SetActive(false);
+			if (GameManager.instance.getLevel () == 4)
+				Application.Quit();
         }
     }
 

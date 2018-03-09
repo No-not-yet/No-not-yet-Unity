@@ -157,6 +157,35 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114290115500481178, guid: cdb71cfc6e7c25649acadea4a6c46647,
+        type: 2}
+      propertyPath: m_Text
+      value: Have a nice day
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957733231906984, guid: cdb71cfc6e7c25649acadea4a6c46647, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114290115500481178, guid: cdb71cfc6e7c25649acadea4a6c46647,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224581043106197126, guid: cdb71cfc6e7c25649acadea4a6c46647,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -57
+      objectReference: {fileID: 0}
+    - target: {fileID: 224663126945733968, guid: cdb71cfc6e7c25649acadea4a6c46647,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 683.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224663126945733968, guid: cdb71cfc6e7c25649acadea4a6c46647,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 906.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdb71cfc6e7c25649acadea4a6c46647, type: 2}
   m_IsPrefabParent: 0
@@ -335,6 +364,26 @@ Prefab:
         type: 2}
       propertyPath: m_Alpha
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224808621526444364, guid: 15df1d4b01bfb8b42bb956dc9cc9d3e2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224808621526444364, guid: 15df1d4b01bfb8b42bb956dc9cc9d3e2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 21.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224808621526444364, guid: 15df1d4b01bfb8b42bb956dc9cc9d3e2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224808621526444364, guid: 15df1d4b01bfb8b42bb956dc9cc9d3e2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 15.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15df1d4b01bfb8b42bb956dc9cc9d3e2, type: 2}
