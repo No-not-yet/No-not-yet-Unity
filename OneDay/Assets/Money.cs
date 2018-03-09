@@ -41,7 +41,7 @@ public class Money : MonoBehaviour {
     void Start () {
         //Debug.Log("Current Money: $" + getMoney());
         //pay(10000);
-        //Debug.Log("Current Money: $" + getMoney());
+        Debug.Log("Current Money: $" + getMoney());
     }
 	
 	// Update is called once per frame

@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 
 	// Value that change the room
-	private int level = 2;
+	private int level = 1;
 	public bool cLevel = false;
 
 	public int firstGoal = 3;
@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour {
 			break;
 		case 3:
 			Debug.Log ("Checking for lvl 3 completeness");
+			this.cLevel = true;
 			break;
 		default:
 			Debug.Log ("Level outside of 3 scenes");

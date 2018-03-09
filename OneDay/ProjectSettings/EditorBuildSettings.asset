@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Default.unity
     guid: a280219ec9cb11f4a805b6f1cfc6a33e
-  - enabled: 0
+  - enabled: 1
     path: Assets/CasaRicos.unity
     guid: d4e28622c433fbc43846caa1926efedb
   - enabled: 1
     path: Assets/CasaPobres.unity
     guid: 5276ab00d3359e74781f9a1ab3f25e5f
+  - enabled: 1
+    path: Assets/Scene_03.unity
+    guid: 3d10aa82d50f44b42be3d1996280569d
+  - enabled: 1
+    path: Assets/SceneTest.unity
+    guid: 586f223b1f6cc2b409c81c504b3b3beb

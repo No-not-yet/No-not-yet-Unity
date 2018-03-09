@@ -56,6 +56,27 @@ public class Picker : MonoBehaviour {
 			return;
 		}
 
+		// Check if exit
+		if ( go.name == "Exit"){
+			//Debug.Log ("Object is an exit");
+			Debug.Log("Can you go? " + GameManager.instance.completedLevel ());
+			if (GameManager.instance.completedLevel ()) {
+				GameManager.instance.setLevel (GameManager.instance.getLevel() + 1);
+				GameManager.instance.cLevel = false;
+				GameManager.instance.toDos.Clear ();
+
+				// Cambiar dinero
+
+
+
+				Debug.Log ("Start fading");
+				GameObject.Find ("Loader").GetComponent<SceneController> ().loadScene(GameManager.instance.getLevel());
+
+			}
+			return;
+		}
+
+
 		// Check if you pay, otherwise not do anything
 		this.cost = go.GetComponent<ListInteraction>().getCost();
 		if (!(this.gameObject.GetComponent<Money> ().pay (this.cost))) {
@@ -98,7 +119,7 @@ public class Picker : MonoBehaviour {
 		// Debug List Interaction
 		//Debug.Log("In the list interaction you have been used? ");
 		GameManager.instance.printListToDo ();
-		Debug.Log("Can you go? " + GameManager.instance.completedLevel ());
+
 
 	}
 
