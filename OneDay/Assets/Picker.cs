@@ -69,7 +69,7 @@ public class Picker : MonoBehaviour {
 		this.initialPos = go.transform.position;
 
 		// Send show info
-		this.gameObject.GetComponent<WelcomeMsg> ().showInfo(this.pickedObject.GetComponent<ListInteraction>().getInfo());
+		this.gameObject.GetComponent<WelcomeMsg> ().showInfo(this.pickedObject.GetComponent<ListInteraction>().getInfo(), this.cost);
 
 		//Debug.Log ("Picked " + this.pickedObject.name);
 	}
