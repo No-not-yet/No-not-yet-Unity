@@ -244,7 +244,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437054544987554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: -0.006, z: -0.148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4473835461469274}
@@ -333,7 +333,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65397891716412124
 BoxCollider:
@@ -373,14 +373,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7205882, g: 0.20663925, b: 0.20663925, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 85dcbbd4496e1b94f9db6bfc75b3938a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c862cb24461e16b448a902e31c86e63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
 --- !u!114 &114401892971511622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -686,36 +686,29 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'blablablablablablablablablablablablablabla
+  m_Text: 'Your day has begun!
 
-    blablablablablablablablablablablablablabla
 
-    blablablablablablablablablablablablablabla
+    -> Press to move and look around for objects.
 
-    blablablablablablablablablablablablablabla
+    -> Press again to complete a task.
 
-    blablablablablablablablablablablablablabla
 
-    blablablablablablablablablablablablablabla
+    Have Fun before going outside
 
-    blablablablablablablablablablablablablabla
 
-    blablablablablablablablablablablablablabla
-
-    blablablablablablablablablablablablablabla
-
-    blablablablablablablablablablablablablabla
+    (Press to continue).
 
 '
 --- !u!114 &114847611380773494
@@ -858,7 +851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: -205}
+  m_AnchoredPosition: {x: 29, y: -205}
   m_SizeDelta: {x: 519.8, y: 262.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224239318009371266
@@ -974,5 +967,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -40, y: -100}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 384, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
