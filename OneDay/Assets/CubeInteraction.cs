@@ -9,12 +9,19 @@ public class CubeInteraction : MonoBehaviour
 
     public GameObject activList;
     public string tasks;
+    public AudioSource Paper;
 
     public void setTasks(string tasks)
     {
         this.tasks = tasks;
 
     }
+
+    public void PlayPaper()
+    {
+        Paper.Play();
+    }
+
 
 
     void Start()
@@ -44,6 +51,7 @@ public class CubeInteraction : MonoBehaviour
 
         activList.transform.parent.gameObject.SetActive(true);
         activList.GetComponent<Text>().text = tasks;
+        PlayPaper();
 
     }
 
