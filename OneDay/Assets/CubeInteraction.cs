@@ -8,11 +8,20 @@ public class CubeInteraction : MonoBehaviour
 {
 
     public GameObject activList;
+    public string tasks;
+
+    public void setTasks(string tasks)
+    {
+        this.tasks = tasks;
+
+    }
 
 
     void Start()
-    {
- 
+    {   
+        //just a test for the setter
+        /*string testTasks = "lol\nlol\nlol";
+        setTasks(testTasks);*/
     }
 
     // Update is called once per frame
@@ -20,29 +29,21 @@ public class CubeInteraction : MonoBehaviour
     {
         if (activList.activeSelf == true && Input.GetMouseButtonDown(0))
         {
-            activList.SetActive(false);
+            activList.transform.parent.gameObject.SetActive(false);
+            //activList.SetActive(false);
         }
 
 
     }
 
-    /*public void PointerEnter()
-    {
-        // Debug.Log("Pointer.enter");
-
-    }
-
-    public void PointerExit()
-    {
-         Debug.Log("Pointer.exit");
-
-    }*/
+    
 
     public void PointerDown()
     {
 
-        activList.SetActive(true);
-        activList.GetComponent<Text>().text = "lol\nlol\nlol";
+
+        activList.transform.parent.gameObject.SetActive(true);
+        activList.GetComponent<Text>().text = tasks;
 
     }
 

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Money : MonoBehaviour {
 
+    //public GameObject money;
     public int currentValue = 1000;
 
     public void setMoney(int currentValue)
@@ -39,6 +41,11 @@ public class Money : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        if (gameObject.transform.parent != null) {
+            gameObject.GetComponent<Text>().text = getMoney().ToString();
+        }
+        
+
+    }
 }

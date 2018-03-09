@@ -22,7 +22,8 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   //Test currentTime() must give format 00:00
-        Debug.Log(currentTime());
+        //Debug.Log(currentTime());
+        gameObject.GetComponent<Text>().text = currentTime();
     }
 
 	public void toogleTime(){
