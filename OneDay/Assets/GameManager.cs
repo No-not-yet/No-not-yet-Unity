@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 
 	// Value that change the room
-	private int level = 1;
+	private int level = 2;
 	public bool cLevel = false;
 
 	public int firstGoal = 3;
@@ -61,6 +61,11 @@ public class GameManager : MonoBehaviour {
 			break;
 		case 2:
 			Debug.Log ("Checking for lvl 2 completeness");
+
+			// Still needs or time limit
+			if(basicNeeds() ){
+				this.cLevel = true;
+			}
 			break;
 		case 3:
 			Debug.Log ("Checking for lvl 3 completeness");
@@ -110,5 +115,21 @@ public class GameManager : MonoBehaviour {
 
 		return false;
 	}
+
+	public bool basicNeeds(){
+		int count = 0;
+		foreach (ToDo aDo in toDos) {
+			if ( aDo.done == true && (aDo.todo == "Eat" || aDo.todo == "Bath" || aDo.todo == "Toilet") ) {
+				count++;
+				if (count >= 3) {
+					return true;
+				}
+
+			}
+		}
+
+		return false;
+	}
+
 
 }
