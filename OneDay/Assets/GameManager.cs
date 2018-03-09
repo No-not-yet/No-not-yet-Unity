@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 
 	// Value that change the room
-	private int level = 2;
+	private int level = 1;
 	public bool cLevel = false;
 
 	public int firstGoal = 3;

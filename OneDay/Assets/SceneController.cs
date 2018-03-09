@@ -8,13 +8,16 @@ public class SceneController : MonoBehaviour {
 	// Instance public in order to be used by any script
 	public static SceneController instance = null;
 
-	string scene1 = "SceneTest";
-	string scene2 = "CasaPobres";
+	string scene0 = "CasaRicos";
+	string scene1 = "CasaPobres";
+	string scene2 = "Scene_03";
 	string targetScene;
 	CanvasGroup canvasGroup;
 
 	Coroutine transitionAlpha;
 	public float transitionSmoothTime = 0.1f;
+
+	GameObject camera;
 
 	void Awake(){
 		if (instance == null)
@@ -22,12 +25,18 @@ public class SceneController : MonoBehaviour {
 		else if (instance != null)
 			Destroy (gameObject);
 		DontDestroyOnLoad (gameObject);
+
 		canvasGroup = GetComponent<CanvasGroup> ();
+
+		camera = GameObject.Find ("Main Camera");
 	}
 
 	// Use this for initialization
 	void Start () {
 		//TransitionToScene(scene1);
+		this.transform.position = camera.transform.position + camera.transform.forward * 1f;
+		this.transform.parent = camera.transform;
+		//this.transform.SetSiblingIndex (0);
 	}
 	
 	// Update is called once per frame
@@ -37,16 +46,35 @@ public class SceneController : MonoBehaviour {
 			transitionToScene(scene1);
 		}*/
 
-		if (Input.touchCount > 0) {
+
+		/*if (Input.GetMouseButtonDown(0)) {
+			Debug.Log ("Entrando a scene");
+			if(SceneManager.GetActiveScene ().name == scene0)
+				transitionToScene(scene1);
+
 			if(SceneManager.GetActiveScene ().name == scene2)
 				transitionToScene(scene1);
 
 			if(SceneManager.GetActiveScene ().name == scene1)
 				transitionToScene(scene2);
+		}*/
+	}
+
+	public void loadScene(int i){
+		switch (i) {
+		case 2:
+			transitionToScene (scene1);
+			break;
+		case 3:
+			transitionToScene (scene2);
+			break;
+		default:
+			transitionToScene (scene0);
+			break;
 		}
 	}
 
-	void transitionToScene(string sceneName){
+	public void transitionToScene(string sceneName){
 		if (SceneManager.GetActiveScene ().name == sceneName)
 			return;
 		targetScene = sceneName;
@@ -79,6 +107,14 @@ public class SceneController : MonoBehaviour {
 	IEnumerator loadingScene(){
 		SceneManager.LoadScene (targetScene);
 		string activeScene = SceneManager.GetActiveScene ().name;
+
+		if (activeScene == targetScene) {
+			camera = GameObject.Find ("Main Camera");
+			this.transform.position = camera.transform.position + camera.transform.forward * 1.5f;
+			this.transform.parent = camera.transform;
+			//this.transform.SetSiblingIndex (0);
+		}
+			
 
 		while(activeScene != targetScene){
 			Debug.Log ("Loading ... ");

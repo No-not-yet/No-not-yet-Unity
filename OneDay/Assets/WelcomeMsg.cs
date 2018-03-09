@@ -35,7 +35,11 @@ public class WelcomeMsg : MonoBehaviour
 		//Debug.Log("Texto del costInfo: " + infoCostField.text);
 
 		//Disable welcome mssg for dev purposes also inst not invoking
-		//welcome.SetActive(false);
+		if(GameManager.instance.getLevel() == 2){
+			welcome.SetActive(false);
+			time = 0.1f;
+			Inst.GetComponentInChildren<Text> ().text = "The day has just begun, and you have a lot to do \n Try to make as much as you can... \n \n Make the right choices.";
+		}
 		Invoke("Hide", time);
 		//showInfo ("Te haz bañado, hueles a popo de todos modos :(");
     }
