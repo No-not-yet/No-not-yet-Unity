@@ -1140,6 +1140,14 @@ Prefab:
       propertyPath: m_Name
       value: Eat
       objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: b7e558306250886489059beb1b13f2dd, type: 3}
+      propertyPath: m_Name
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: b7e558306250886489059beb1b13f2dd, type: 3}
+      propertyPath: m_Name
+      value: Pay bills
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7e558306250886489059beb1b13f2dd, type: 3}
   m_IsPrefabParent: 0
@@ -1379,6 +1387,320 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.903095, y: 3.3944402, z: 1.8788646}
   m_Center: {x: -1.3991791, y: 1.5274341, z: 2.186295}
+--- !u!114 &696874680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874681}
+          m_MethodName: PointerDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874681}
+          m_MethodName: PointerEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874681}
+          m_MethodName: PointerExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &696874681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c14e1ec1f269334ab597cd23be1f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTimer: 2
+  tooltipDelay: 0.35
+  toolTipInfo: 
+  toolTipObj: {fileID: 925750913}
+--- !u!114 &696874682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748485ea376c235438494085e919b965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToDo: 
+  costToDo: 80
+  infoToDo: leurem ipsum
+  indexToDo: 0
+--- !u!1 &696874683 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100024, guid: b7e558306250886489059beb1b13f2dd, type: 3}
+  m_PrefabInternal: {fileID: 696874667}
+--- !u!65 &696874684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.94, y: 4.44, z: 4.94}
+  m_Center: {x: 3.81, y: 2.67, z: 1.54}
+--- !u!1 &696874685 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100016, guid: b7e558306250886489059beb1b13f2dd, type: 3}
+  m_PrefabInternal: {fileID: 696874667}
+--- !u!65 &696874686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.32, y: 0.88, z: 2.04}
+  m_Center: {x: -0.0000011026859, y: 0, z: 0.00000023841858}
+--- !u!114 &696874687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874689}
+          m_MethodName: PointerDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874689}
+          m_MethodName: PointerEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874689}
+          m_MethodName: PointerExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &696874688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748485ea376c235438494085e919b965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToDo: 
+  costToDo: 80
+  infoToDo: leurem ipsum
+  indexToDo: 0
+--- !u!114 &696874689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c14e1ec1f269334ab597cd23be1f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTimer: 2
+  tooltipDelay: 0.35
+  toolTipInfo: 
+  toolTipObj: {fileID: 925750913}
+--- !u!114 &696874690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874691}
+          m_MethodName: PointerDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874691}
+          m_MethodName: PointerEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 696874691}
+          m_MethodName: PointerExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &696874691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c14e1ec1f269334ab597cd23be1f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gazeTimer: 2
+  tooltipDelay: 0.35
+  toolTipInfo: 
+  toolTipObj: {fileID: 925750913}
+--- !u!114 &696874692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696874683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748485ea376c235438494085e919b965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToDo: 
+  costToDo: 80
+  infoToDo: leurem ipsum
+  indexToDo: 0
 --- !u!1 &710133177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,15 +1863,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.36
+      value: -2.73
       objectReference: {fileID: 0}
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.26
+      value: -2.817
       objectReference: {fileID: 0}
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.61
+      value: 6.706
       objectReference: {fileID: 0}
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1573,7 +1895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1879757912947798, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_Name
-      value: Toilet
+      value: Fix ceiling
       objectReference: {fileID: 0}
     - target: {fileID: 114944458904612804, guid: 3f29167b786937c4aba8f636c000e918,
         type: 2}
@@ -1585,6 +1907,26 @@ Prefab:
       propertyPath: toolTipObj
       value: 
       objectReference: {fileID: 925750913}
+    - target: {fileID: 23276159035782902, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65620013446419204, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Size.x
+      value: -10.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 65620013446419204, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 65620013446419204, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 5.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
   m_IsPrefabParent: 0
@@ -2278,15 +2620,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.42
+      value: -8.826
       objectReference: {fileID: 0}
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -6.71
       objectReference: {fileID: 0}
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.61
+      value: 11.12
       objectReference: {fileID: 0}
     - target: {fileID: 4308657746272410, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2310,7 +2652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1879757912947798, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
       propertyPath: m_Name
-      value: Eat
+      value: Fix window
       objectReference: {fileID: 0}
     - target: {fileID: 114944458904612804, guid: 3f29167b786937c4aba8f636c000e918,
         type: 2}
@@ -2322,6 +2664,21 @@ Prefab:
       propertyPath: toolTipObj
       value: 
       objectReference: {fileID: 925750913}
+    - target: {fileID: 23276159035782902, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65620013446419204, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 5.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 65620013446419204, guid: 3f29167b786937c4aba8f636c000e918,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 6.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f29167b786937c4aba8f636c000e918, type: 2}
   m_IsPrefabParent: 0

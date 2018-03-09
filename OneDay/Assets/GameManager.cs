@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour {
 	public bool basicNeeds(){
 		int count = 0;
 		foreach (ToDo aDo in toDos) {
-			if ( aDo.done == true && (aDo.todo == "Eat" || aDo.todo == "Bath" || aDo.todo == "Toilet") ) {
+			if ( aDo.done == true && (aDo.todo == "Eat" || aDo.todo == "Bath" || aDo.todo == "Sleep") ) {
 				count++;
 				if (count >= 3) {
 					return true;
