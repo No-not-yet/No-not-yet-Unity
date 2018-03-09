@@ -5,7 +5,7 @@ using UnityEngine;
 public class Status : MonoBehaviour {
 
 	// Values that will lock the button
-	private bool isWalking = false;
+	public bool isWalking = false;
 	private bool isBusy = false;
 	private float timer;
 
