@@ -92,7 +92,7 @@ public class PointerInteraction : MonoBehaviour
     {
 		// Not walking to interact
 		if (playerStatus.getBusy()) {
-			Debug.Log ("Interacting");
+			//Debug.Log ("Interacting");
 
 			playerPicker.setPickedObject (this.gameObject);
 			// Debug List interactives

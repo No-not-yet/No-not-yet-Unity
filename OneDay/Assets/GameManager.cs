@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 
 	// Value that change the room
-	private int level = 2;
+	private int level = 1;
 
 	// 2nd way
 	public List<ToDo> toDos;
@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviour {
 
 	public void setLevel(int value){
 		this.level = value;
+	}
+
+
+	// Check if completed
+	public bool completedLevel(){
+		return false;
 	}
 
 
