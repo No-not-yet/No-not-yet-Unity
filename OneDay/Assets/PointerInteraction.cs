@@ -115,7 +115,7 @@ public class PointerInteraction : MonoBehaviour
 				foreach (char letter in this.toolTipInfo.ToCharArray()) {
 					if(gazeAt)
 						toolTiptext.text += letter;
-					yield return new WaitForSeconds (0.2f);
+					yield return new WaitForSeconds (0.05f);
 				}
 					
 				yield break;

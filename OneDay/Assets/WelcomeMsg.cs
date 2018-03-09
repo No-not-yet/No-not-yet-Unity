@@ -14,6 +14,8 @@ public class WelcomeMsg : MonoBehaviour
 	Coroutine typeInfo;
 	string finalInfo;
 	private Text infoTextField;
+	private Text infoCostField;
+	private Text[] children;
 
     void Start()
     {        
@@ -21,9 +23,16 @@ public class WelcomeMsg : MonoBehaviour
 		playerStatus = this.GetComponent<Status> ();
 		playerStatus.setBusy (true);
 
+		// Get children Texts
+		children = this.GetComponentsInChildren<Text>(true);
+
 		// Get text for info
-		infoTextField = this.infoBox.GetComponentInChildren<Text>();
-		//Debug.Log("Texto del texinfo: " + infoTextField.text);
+		infoTextField = children[3];
+		// Get s4th children Text because it is the cost one
+		infoCostField = children [4];
+
+		//Debug.Log("Texto del noteInfo: " + infoTextField.text);
+		//Debug.Log("Texto del costInfo: " + infoCostField.text);
 
 		//Disable welcome mssg for dev purposes also inst not invoking
 		//welcome.SetActive(false);
@@ -44,11 +53,12 @@ public class WelcomeMsg : MonoBehaviour
         }
     }
 
-	public void showInfo(string info){
+	public void showInfo(string info, int cost){
 		infoBox.SetActive (true);
 		this.finalInfo = info;
 
 		if (typeInfo == null) {
+			this.infoCostField.text = "-$" + cost;
 			typeInfo = StartCoroutine (keyboardTyping());
 		}
 	}
