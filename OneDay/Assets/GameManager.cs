@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
 	public bool cLevel = false;
 
 	public int firstGoal = 3;
+	public int minIndex;
 
 	// 2nd way
 	public List<ToDo> toDos;
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour {
 			Debug.Log ("Checking for lvl 2 completeness");
 
 			// Still needs or time limit
-			if(basicNeeds() ){
+			if(basicNeeds()){
 				this.cLevel = true;
 			}
 			break;
@@ -130,6 +131,5 @@ public class GameManager : MonoBehaviour {
 
 		return false;
 	}
-
-
+		
 }

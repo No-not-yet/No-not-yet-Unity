@@ -25,6 +25,13 @@ public class Money : MonoBehaviour {
 			return false;
 		}
 		this.currentValue -= cost;
+
+		// Check if 0 then setlvl as done
+		if (this.currentValue <= 0) {
+			Debug.Log ("Used all money");
+			GameManager.instance.cLevel = true;
+		}
+
 		return true;
     }
 
