@@ -13,7 +13,7 @@ public class Picker : MonoBehaviour {
 	private float speed = 50f;
 
 	// Delay picked variables
-	private float pickingTime = 3.5f;
+	private float pickingTime = 2.5f;
 	private float timer = 0f;
 	Coroutine willDrop;
 
@@ -79,6 +79,7 @@ public class Picker : MonoBehaviour {
 		this.cost = go.GetComponent<ListInteraction>().getCost();
 		if (!(this.gameObject.GetComponent<Money> ().pay (this.cost))) {
 			this.gameObject.GetComponent<WelcomeMsg> ().showInfo("Not Enough Money!!! \nToo expensive for you right now", this.cost);
+			StartCoroutine (hideNotEnough());
 			return;
 		}
 
@@ -133,6 +134,11 @@ public class Picker : MonoBehaviour {
 			}
 				
 		}
+	}
+
+	IEnumerator hideNotEnough(){
+		yield return new WaitForSeconds (2f);
+		this.gameObject.GetComponent<WelcomeMsg> ().hideInfo ();
 	}
 
 }
