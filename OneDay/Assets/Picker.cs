@@ -87,8 +87,10 @@ public class Picker : MonoBehaviour {
 		this.pickedObject = go;
 		this.initialPos = go.transform.position;
 
-		// Send show info
-		this.gameObject.GetComponent<WelcomeMsg> ().showInfo(this.pickedObject.GetComponent<ListInteraction>().getInfo(), this.cost);
+        // Send show info
+        this.gameObject.GetComponent<WelcomeMsg> ().showInfo(this.pickedObject.GetComponent<ListInteraction>().getInfo(), this.cost);
+
+        this.pickedObject.GetComponent<SFXsleep>().PlaySleep();
 
 		//Debug.Log ("Picked " + this.pickedObject.name);
 	}
