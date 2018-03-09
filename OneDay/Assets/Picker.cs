@@ -97,7 +97,8 @@ public class Picker : MonoBehaviour {
 
 		// Debug List Interaction
 		//Debug.Log("In the list interaction you have been used? ");
-		//GameManager.instance.printListToDo ();
+		GameManager.instance.printListToDo ();
+		Debug.Log("Can you go? " + GameManager.instance.completedLevel ());
 
 	}
 
