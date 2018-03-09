@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 
 	// Value that change the room
-	private int level = 1;
+	private int level = 2;
+	public bool cLevel = false;
+
+	public int firstGoal = 3;
+	public int minIndex;
 
 	// 2nd way
 	public List<ToDo> toDos;
@@ -43,7 +47,36 @@ public class GameManager : MonoBehaviour {
 
 	// Check if completed
 	public bool completedLevel(){
-		return false;
+
+		if (cLevel)
+			return cLevel;
+
+		switch (level) {
+		case 1:
+			Debug.Log ("Checking for lvl 1 completeness");
+
+			if (countToDos()) {
+				this.cLevel = true;
+			}
+
+			break;
+		case 2:
+			Debug.Log ("Checking for lvl 2 completeness");
+
+			// Still needs or time limit
+			if(basicNeeds()){
+				this.cLevel = true;
+			}
+			break;
+		case 3:
+			Debug.Log ("Checking for lvl 3 completeness");
+			break;
+		default:
+			Debug.Log ("Level outside of 3 scenes");
+			break;
+		}
+
+		return cLevel;
 	}
 
 
@@ -68,4 +101,35 @@ public class GameManager : MonoBehaviour {
 		return toDos [index].done;
 	}
 
+	public bool countToDos(){
+		int count = 0;
+		foreach (ToDo aDo in toDos) {
+			if (aDo.done) {
+				count++;
+
+				if (count >= firstGoal) {
+					return true;
+				}
+
+			}
+		}
+
+		return false;
+	}
+
+	public bool basicNeeds(){
+		int count = 0;
+		foreach (ToDo aDo in toDos) {
+			if ( aDo.done == true && (aDo.todo == "Eat" || aDo.todo == "Bath" || aDo.todo == "Toilet") ) {
+				count++;
+				if (count >= 3) {
+					return true;
+				}
+
+			}
+		}
+
+		return false;
+	}
+		
 }
