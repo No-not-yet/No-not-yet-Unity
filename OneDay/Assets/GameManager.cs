@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour {
 			break;
 		case 3:
 			Debug.Log ("Checking for lvl 3 completeness");
+			this.cLevel = true;
 			break;
 		default:
 			Debug.Log ("Level outside of 3 scenes");
