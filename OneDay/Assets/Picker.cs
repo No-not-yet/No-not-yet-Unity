@@ -78,7 +78,7 @@ public class Picker : MonoBehaviour {
 		// Check if you pay, otherwise not do anything
 		this.cost = go.GetComponent<ListInteraction>().getCost();
 		if (!(this.gameObject.GetComponent<Money> ().pay (this.cost))) {
-			Debug.Log ("Couldn t pay");
+			this.gameObject.GetComponent<WelcomeMsg> ().showInfo("Not Enough Money!!! \nToo expensive for you right now", this.cost);
 			return;
 		}
 
