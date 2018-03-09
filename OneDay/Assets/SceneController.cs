@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour {
 	string scene0 = "CasaRicos";
 	string scene1 = "CasaPobres";
 	string scene2 = "Scene_03";
+	string scene3 = "SceneEnd";
 	string targetScene;
 	CanvasGroup canvasGroup;
 
@@ -67,6 +68,9 @@ public class SceneController : MonoBehaviour {
 			break;
 		case 3:
 			transitionToScene (scene2);
+			break;
+		case 4:
+			transitionToScene (scene3);
 			break;
 		default:
 			transitionToScene (scene0);

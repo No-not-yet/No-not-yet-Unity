@@ -16,6 +16,7 @@ public class WelcomeMsg : MonoBehaviour
 	private Text infoTextField;
 	private Text infoCostField;
 	private Text[] children;
+	private Text[] chidrenInst;
 
     void Start()
     {        
@@ -38,8 +39,13 @@ public class WelcomeMsg : MonoBehaviour
 		if(GameManager.instance.getLevel() == 2){
 			welcome.SetActive(false);
 			time = 0.1f;
-			Inst.GetComponentInChildren<Text> ().text = "The day has just begun, and you have a lot to do \n Try to make as much as you can... \n \n Make the right choices.";
+			Inst.GetComponentInChildren<Text> ().text = "\n The day has just begun, and you have a lot to do \n Try to make as much as you can... \n \n Make the right choices.";
+		}else if(GameManager.instance.getLevel() == 3){
+			welcome.SetActive(false);
+			time = 0.1f;
+			Inst.GetComponentInChildren<Text> ().text = "The real danger in poverty is the lack of options, hope you could understand it after this game. \n Make a donation to help, make a difference ";
 		}
+
 		Invoke("Hide", time);
 		//showInfo ("Te haz bañado, hueles a popo de todos modos :(");
     }

@@ -39,8 +39,8 @@ public class Picker : MonoBehaviour {
 			if (willDrop == null)
 				willDrop = StartCoroutine (willDropF ());
 
-			this.pickedObject.transform.position = cameraChild.position + cameraChild.forward * Offset;
-			this.pickedObject.transform.Rotate (Vector3.up, speed * Time.deltaTime);
+			//this.pickedObject.transform.position = cameraChild.position + cameraChild.forward * Offset;
+			//this.pickedObject.transform.Rotate (Vector3.up, speed * Time.deltaTime);
 		}
 	}
 
@@ -66,8 +66,6 @@ public class Picker : MonoBehaviour {
 				GameManager.instance.toDos.Clear ();
 
 				// Cambiar dinero
-
-
 
 				Debug.Log ("Start fading");
 				GameObject.Find ("Loader").GetComponent<SceneController> ().loadScene(GameManager.instance.getLevel());
