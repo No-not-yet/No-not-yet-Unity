@@ -175,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1966074909074802
 GameObject:
   m_ObjectHideFlags: 1
@@ -686,36 +686,29 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'blablablablablablablablablablablablablabla
+  m_Text: 'Your day has begun!
 
-    blablablablablablablablablablablablablabla
 
-    blablablablablablablablablablablablablabla
+    -> Press to move and look around for objects.
 
-    blablablablablablablablablablablablablabla
+    -> Press again to complete a task.
 
-    blablablablablablablablablablablablablabla
 
-    blablablablablablablablablablablablablabla
+    Have Fun before going outside
 
-    blablablablablablablablablablablablablabla
 
-    blablablablablablablablablablablablablabla
-
-    blablablablablablablablablablablablablabla
-
-    blablablablablablablablablablablablablabla
+    (Press to continue).
 
 '
 --- !u!114 &114847611380773494
@@ -858,7 +851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: -205}
+  m_AnchoredPosition: {x: 29, y: -205}
   m_SizeDelta: {x: 519.8, y: 262.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224239318009371266
